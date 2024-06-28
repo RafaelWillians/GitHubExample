@@ -1,6 +1,55 @@
-Readme temporário. Apenas para testes.
+## Pasta Oculta Git
+
+Há uma pasta oculta chamada `.git` que indica que o nosso projeto é um repo git.
+
+Se precisarmos criar um repo git em um novo projeto, criamos a pasta e inicializamos aquele repo usando o comando `git init`.
+
+```sh
+mkdir /workspaces/tmp/new-project
+cd /workspaces/tmp/new-project/
+git init
+touch Readme.md
+code Readme.md
+# Editar o arquivo Readme.md e salvar.
+git status
+git add .
+git commit -a -m "Adicionar Readme inicial"
+```
+
+
+## Cloning
+
+Podemos clonar repos de três formas: HTTPS, SSH e GitHub CLI.
+
+Como estamos usando o GitHub Codespaces, iremos criar um diretório temporário no nosso workspace.
+
+```sh
+mkdir /workspaces/tmp
+cd /workspaces/tmp
+```
+
+
+
+## HTTPS
+
+```sh
+git clone https://github.com/RafaWilliansAC2/GitHubExample.git
+cd GitHubExample/
+```
 
 ## Commits
+
+"Setar" o editor global
+
+```sh
+git config --global core.editor emacs
+```
+
+Para dar commit com uma mensagem direto pelo CLI, sem precisar abrir um editor.
+
+```sh
+git commit -m "mensagem do commit"
+```
 
 ## Branches
 
@@ -9,3 +58,64 @@ Readme temporário. Apenas para testes.
 ## Stashing
 
 ## Merging
+
+## Add
+
+Quando desejamos dar staging nas alterações que serão incluídas no commit.
+Podemos usar o . para adicionar todos os arquivos possíveis.
+
+```sh
+git add Readme.md
+git add .
+```
+
+## Reset
+
+Reset permite voltar as mudanças de Staged para Unstaged.
+Útil para quando precisarmos reverter todos os arquivos, para não serem commitados.
+
+```sh
+git add .
+git reset
+```
+
+## Status
+
+Git status permite mostrar quais arquivos serão ou não commitados.
+
+```sh
+git status
+```
+
+## Gitconfig file
+
+O arquivo gitconfig armazena as configurações globais do Git, como email, nome, editor, entre outras.
+
+Mostrar o conteúdo do arquivo .gifconfig
+
+```sh
+git config --list
+```
+
+Na primeira instalação local do Git, precisamos "setar" o nome e o email.
+
+```sh
+git config --global user.name "John Doe"
+git config --global user.email johndoe@example.com
+```
+
+## Log
+
+Mostra as alterações recentes, SHA, data/hora e mensagens dos commits
+
+```sh
+git log
+```
+
+## Push
+
+Quando precisamos subir um repo para nossa origem remota (para o GitHub por exemplo)
+
+```sh
+git push
+```

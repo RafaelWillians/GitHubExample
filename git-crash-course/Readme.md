@@ -28,6 +28,8 @@ mkdir /workspaces/tmp
 cd /workspaces/tmp
 ```
 
+Para conectar com o repo remotamente (via VSCode por exemplo), é necessário gerar um PAT (Personal Access) no site do GitHub
+
 
 
 ## HTTPS

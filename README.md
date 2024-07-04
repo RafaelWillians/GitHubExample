@@ -1,2 +1,3 @@
 # GitHubExample
-Repo de exemplo, para testes das certificações do GitHub
+Repo de exemplo, para testes das certificações do GitHub.
+

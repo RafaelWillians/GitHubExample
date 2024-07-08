@@ -28,7 +28,14 @@ mkdir /workspaces/tmp
 cd /workspaces/tmp
 ```
 
-Para conectar com o repo remotamente (via VSCode por exemplo), é necessário gerar um PAT (Personal Access) no site do GitHub
+Para conectar com o repo remotamente (via VSCode por exemplo), é necessário gerar um PAT (Personal Access Token) no site do GitHub. 
+
+[GitHub Settings](https://github.com/settings/profile) > Developer Settings > Personal access tokens > [Fine-graned tokens](https://github.com/settings/tokens?type=beta)
+
+Como princípio de Privilégio Mínimo, ideal é atribuir o mínimo necessário de permissões.
+Para poder dar commits, habilitei somente as permissões de repositório Commit statuses (Read and Write) e Contents (Read and Write).
+
+## SSH
 
 
 

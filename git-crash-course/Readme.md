@@ -96,6 +96,22 @@ git commit -m "mensagem do commit"
 
 ## Branches
 
+Lista as branches do projeto.
+```
+git branch
+```
+
+Criar nova branch.
+```
+git branch branch-name
+```
+
+Selecionar branch específica.
+```
+git checkout branch-name
+```
+
+
 ## Remotes
 
 ## Stashing

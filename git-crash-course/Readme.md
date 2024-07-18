@@ -38,6 +38,40 @@ Para poder dar commits, habilitei somente as permissões de repositório Commit 
 ## SSH
 
 
+Gerar a chave SSH.
+```
+git config --global user.email "email@email.com"
+git config --global user.name "Seu Nome"
+ssh-keygen -t ed25519 -C "email@email.com"
+```
+
+Via Windows, abrir PowerShell como administrador e ativar o ssh-agent
+
+```
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+Start-Service ssh-agent
+```
+
+Depois no terminal, adicionar a chave SSH
+```
+ssh-add c:/Users/Seu_Usuario/.ssh/id_ed25519
+```
+
+Copiar a chave pública ssh
+```
+cat ssh id_ed25519.pub
+```
+
+No site do GitHub, adicionar chave SSH e colar a chave pública copiada. 
+
+Depois, testar conexão com o comando abaixo e tentar dar commit e push.
+```
+ssh -T git@github.com
+```
+
+
+
+
 
 ## HTTPS
 

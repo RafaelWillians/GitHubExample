@@ -118,6 +118,10 @@ git checkout branch-name
 
 ## Merging
 
+```sh
+git merge main
+```
+
 ## Add
 
 Quando desejamos dar staging nas alterações que serão incluídas no commit.

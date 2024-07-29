@@ -1,7 +1,7 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
 	"name": "Codespace Main",
-	"remoteUser": "devcontainer",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
 	"customizations": {
 		"vscode": {
 			"extensions": [

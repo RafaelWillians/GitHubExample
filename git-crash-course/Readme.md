@@ -38,13 +38,14 @@ Para poder dar commits, habilitei somente as permissões de repositório Commit 
 ## SSH
 
 
-Gerar a chave SSH.
+### Gerar a chave SSH.
 ```
 git config --global user.email "email@email.com"
 git config --global user.name "Seu Nome"
 ssh-keygen -t ed25519 -C "email@email.com"
 ```
 
+#### Windows
 Via Windows, abrir PowerShell como administrador e ativar o ssh-agent
 
 ```
@@ -57,6 +58,31 @@ Depois no terminal, adicionar a chave SSH
 ssh-add c:/Users/Seu_Usuario/.ssh/id_ed25519
 ```
 
+#### Linux (utilizado Linux Mint)
+
+Via SSH
+```
+ssh-keygen -t ed25519 -C "seu_email@exemplo.com"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard
+```
+
+Alternativa: Instalado o CLI do GitHub para poder conectar.
+```sh
+(type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
+&& sudo mkdir -p -m 755 /etc/apt/keyrings \
+&& wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null \
+&& sudo chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+&& gh auth login
+```
+
+
+#### Após gerar chave SSH
+
 Copiar a chave pública ssh
 ```
 cat ssh id_ed25519.pub
@@ -68,10 +94,6 @@ Depois, testar conexão com o comando abaixo e tentar dar commit e push.
 ```
 ssh -T git@github.com
 ```
-
-
-
-
 
 ## HTTPS
 

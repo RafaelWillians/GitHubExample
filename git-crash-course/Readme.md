@@ -136,11 +136,27 @@ git checkout branch-name
 
 ## Remotes
 
-## Stashing
-
-## Merging
+Podemos adicionar remote, mas muitas vezes apenas adicionaremos remoto via upstream ao adicionar uma branch.
 
 ```sh
+git remote add ...
+git branch -u origin nova-feature
+```
+
+## Stashing
+
+```
+git stash
+git stash list
+git stash save meu-nome
+git stash apply
+git stash pop
+```
+
+## Merge
+
+```sh
+git checkout dev
 git merge main
 ```
 

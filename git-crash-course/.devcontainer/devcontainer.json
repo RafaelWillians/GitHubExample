@@ -1,8 +1,0 @@
-{
-    "name": "Codespace Main",
-    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-    "extensions": [
-      "mhutchie.git-graph"
-    ]
-  }
-  

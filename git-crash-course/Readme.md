@@ -17,7 +17,7 @@ git commit -a -m "Adicionar Readme inicial"
 ```
 
 
-## Cloning
+## Clonar
 
 Podemos clonar repos de três formas: HTTPS, SSH e GitHub CLI.
 

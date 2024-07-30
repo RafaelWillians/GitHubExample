@@ -1,8 +1,10 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
 	"name": "Codespace Main",
-	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",
-	"postCreateCommand": "sudo apt-get update && sudo apt-get install -y gh",
+	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",	
+	"features": {
+  		"ghcr.io/devcontainers/features/github-cli:1": {}
+	},
 	"customizations": {
 		"vscode": {
 			"extensions": [

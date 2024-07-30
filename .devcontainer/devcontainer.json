@@ -9,7 +9,8 @@
 		"vscode": {
 			"extensions": [
 				"mhutchie.git-graph",
-				"phil294.git-log--graph"
+				"phil294.git-log--graph",
+				"shd101wyy.markdown-preview-enhanced"
 			]
 		}
 }

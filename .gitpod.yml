@@ -1,0 +1,14 @@
+# .gitpod.yml
+image:
+  file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - mhutchie.git-graph
+    - phil294.git-log--graph
+
+tasks:
+  - init: |
+      echo "Instalando GitHub CLI..."
+    command: |
+      echo "Ambiente configurado com sucesso."

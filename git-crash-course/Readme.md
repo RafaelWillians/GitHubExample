@@ -220,3 +220,9 @@ Quando precisamos subir um repo para nossa origem remota (para o GitHub por exem
 ```sh
 git push
 ```
+
+## Adicionar PAT
+
+```
+export GH_TOKEN="inserir_token_aqui"
+```

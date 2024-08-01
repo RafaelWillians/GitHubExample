@@ -226,3 +226,15 @@ git push
 ```
 export GH_TOKEN="inserir_token_aqui"
 ```
+
+## Tags
+
+Para aplicarmos tags no nosso repo (para quando criarmos releases e mantermos o histórico delas)
+
+```
+git tag 1.0.0
+git push --tags
+git checkout 1.0.0
+git tag -d 1.0.0
+git push -delete origin 1.0.0
+```

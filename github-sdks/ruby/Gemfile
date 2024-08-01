@@ -1,0 +1,8 @@
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# gem "rails"
+gem 'octokit'
+gem 'faraday-retry'
+gem 'faraday-multipart'

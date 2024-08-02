@@ -12,7 +12,8 @@
 			"extensions": [
 				"mhutchie.git-graph",
 				"phil294.git-log--graph",
-				"shd101wyy.markdown-preview-enhanced"
+				"shd101wyy.markdown-preview-enhanced",
+				"github.vscode-github-actions"
 			]
 		}
 }

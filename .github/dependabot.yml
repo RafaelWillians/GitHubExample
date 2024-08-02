@@ -6,12 +6,12 @@
 version: 2
 updates:
   - package-ecosystem: "bundler"
-    directory: "/"
+    directory: "/github-sdks/ruby"
     schedule:
       interval: "weekly"
 
   - package-ecosystem: "terraform"
-    directory: "/"
+    directory: "/github-sdks/terraform"
     schedule:
       interval: "weekly"
 

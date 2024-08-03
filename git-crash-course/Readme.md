@@ -238,3 +238,10 @@ git checkout 1.0.0
 git tag -d 1.0.0
 git push -delete origin 1.0.0
 ```
+
+## Executar Workflow manual
+
+```sh
+gh workflow run manual.yml -f name=mona -f greeting=hello -F data=@mydata
+echo '{"name":"rafa", "greeting":"hello"}' | gh workflow run manual.yml --json
+```

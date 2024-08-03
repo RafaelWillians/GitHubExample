@@ -15,3 +15,4 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: "Olá e boas vindas ao meu repo de teste! Hi and welcome to my test repo!"
         pr-message: "Olá e boas vindas ao meu repo de teste! Hi and welcome to my test repo!"
+

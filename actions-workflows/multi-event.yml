@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Echo Info Basica"
-        run: 
+        run: |
             echo "REF: $GITHUB_REF"
             echo "Job ID: $GITHUB_JOB"
             echo "Action: $GITHUB_ACTION"

@@ -220,3 +220,37 @@ Quando precisamos subir um repo para nossa origem remota (para o GitHub por exem
 ```sh
 git push
 ```
+
+## Adicionar PAT
+
+```
+export GH_TOKEN="inserir_token_aqui"
+```
+
+## Tags
+
+Para aplicarmos tags no nosso repo (para quando criarmos releases e mantermos o histórico delas)
+
+```
+git tag 1.0.0
+git push --tags
+git checkout 1.0.0
+git tag -d 1.0.0
+git push -delete origin 1.0.0
+```
+
+## Executar Workflow manual
+
+```sh
+gh workflow run manual.yml -f name=mona -f greeting=hello -F data=@mydata
+echo '{"name":"rafa", "greeting":"hello"}' | gh workflow run manual.yml --json
+```
+
+## Webhook
+```sh
+curl -X POST \
+-H "Accept: application/vnd.github+json" \
+-H "Authorization: token {PAT} \
+-d '{"event_type": "webhook", "client_payload": {"key": "value"} }' \
+https://api.github.com/repos/{owner}/{repo}/dispatches
+```

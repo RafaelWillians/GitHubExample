@@ -3,14 +3,17 @@
 	"name": "Codespace Main",
 	"image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu",	
 	"features": {
-  		"ghcr.io/devcontainers/features/github-cli:1": {}
+  		"ghcr.io/devcontainers/features/github-cli:1": {},
+		"ghcr.io/devcontainers/features/terraform:1": {},
+		"ghcr.io/devcontainers/features/ruby:1": {}
 	},
 	"customizations": {
 		"vscode": {
 			"extensions": [
 				"mhutchie.git-graph",
 				"phil294.git-log--graph",
-				"shd101wyy.markdown-preview-enhanced"
+				"shd101wyy.markdown-preview-enhanced",
+				"github.vscode-github-actions"
 			]
 		}
 }

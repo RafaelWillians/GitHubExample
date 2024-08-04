@@ -1,0 +1,19 @@
+name: Create Test Issue
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-issue:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3    
+
+    - name: Create Test Issue
+      run: gh issue --repo ${{ github.repository}} create --title "Test Issue" --body "This is a test issue created by a GitHub Actions workflow."
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

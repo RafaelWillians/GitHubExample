@@ -1,0 +1,40 @@
+name: Workflow-Commands
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  workflow-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Group logging
+        run: |
+          echo "::group::Log_Grupo1"
+          echo "Ola"
+          echo "eu"
+          echo "sou"
+          echo "um"
+          echo "grouping"
+          echo "log"
+          echo "::endgroup::"
+
+      - name: Set env vars
+        run: echo "ACTION_ENV=main" >> $GITHUB_ENV
+
+      - name: Adicionar diretorio para PATH
+        run: echo "/home/" >> $GITHUB_PATH
+
+      - name: Mensagem debug
+        run: echo "::debug::MSG_DEBUG"
+
+      - name: Mascarar valor sensível
+        run: |
+          MY_SECRET="lasanha"
+          echo "::add-mask::$MY_SECRET"
+          echo "O melhor prato do mundo é: $MY_SECRET"
+
+      - name: Falha no workflow
+        run: echo "::error::Erro no workflow"

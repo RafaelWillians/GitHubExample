@@ -1,7 +1,9 @@
 name: Create Test Issue
 
 on:
-  workflow_dispatch:  # Permite acionar manualmente o workflow
+  push:
+    branches:
+      - main
 
 jobs:
   create-issue:

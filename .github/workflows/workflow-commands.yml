@@ -22,7 +22,7 @@ jobs:
         echo "::endgroup::"
 
     - name: set env vars
-      run: echo "ACTION_ENV=main" >> $GITHUV_ENV
+      run: echo "ACTION_ENV=main" >> $GITHUB_ENV
 
     - name: adicionar diretorio para PATH
       run: echo "/home/" >> $GITHUB_PATH
@@ -31,9 +31,8 @@ jobs:
       run: echo "::debug::MSG_DEBUG"
 
     - name: mascarar valor sensivel      
-      run: |
-      SECRET_VALUE="lasanha"
-      echo "::add-mask::$SECRET_VALUE"
+      run: |      
+      echo "::add-mask::lasanha" >> $SECRET_VALUE
       echo "O melhor prato do mundo é: $SECRET_VALUE"
 
     - name: Falha no workflow

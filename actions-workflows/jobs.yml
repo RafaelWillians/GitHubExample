@@ -1,0 +1,15 @@
+name: "Dependent Jobs"
+
+on: ['push']
+
+jobs:
+  job1:
+    steps:
+      name: Hello
+      run: echo "Hello, "
+  job2:
+    needs: job1
+    steps:
+      name: World
+      run: echo "World!"
+

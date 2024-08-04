@@ -17,6 +17,6 @@ jobs:
       uses: actions/setup-gh-cli@v2
 
     - name: Create Test Issue
-      run: gh issue create --title "Test Issue" --body "This is a test issue created by a GitHub Actions workflow." --label "test"
+      run: gh issue --repo ${{ github.repository}} create --title "Test Issue" --body "This is a test issue created by a GitHub Actions workflow." --label "test"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

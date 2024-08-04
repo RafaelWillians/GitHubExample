@@ -11,10 +11,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
-
-    - name: Set up GitHub CLI
-      uses: actions/setup-gh-cli@v2
+      uses: actions/checkout@v3    
 
     - name: Create Test Issue
       run: gh issue --repo ${{ github.repository}} create --title "Test Issue" --body "This is a test issue created by a GitHub Actions workflow." --label "test"

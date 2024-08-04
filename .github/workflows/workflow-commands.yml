@@ -31,9 +31,10 @@ jobs:
       run: echo "::debug::MSG_DEBUG"
 
     - name: mascarar valor sensivel      
-      run: |      
-      echo "::add-mask::lasanha" >> $SECRET_VALUE
-      echo "O melhor prato do mundo é: $SECRET_VALUE"
+      run: |
+      $MY_SECRETY="lasanha"      
+      echo "::add-mask::$MY_SECRET"
+      echo "O melhor prato do mundo é: $MY_SECRET"
 
     - name: Falha no workflow
       run: echo "::error::Erro no workflow"

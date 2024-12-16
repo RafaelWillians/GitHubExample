@@ -292,8 +292,11 @@ git branch
 git branch -r
 
 # Selecionar a branch nova
-git checkout test
-git pull test
+git checkout nome_branch
+git pull nome_branch
+
+# (Opcional - caso tenha criado branch nova) Configurar upstream da branch nova, para poder subir ao repo remoto
+git push --set-upstream origin nome_branch
 
 # Modificar a branch de trabalho, então dar commit e push.
 

@@ -256,3 +256,56 @@ curl -X POST \
 -d '{"event_type": "webhook", "client_payload": {"key": "value"} }' \
 https://api.github.com/repos/{owner}/{repo}/dispatches
 ```
+
+## Fluxo de trabalho com branch
+
+Esta lista de comandos serve como uma referência, de como trabalhar no dia-a-dia com os repositórios, de acordo com o Git Flow.
+Nele, em vez de darmos push diretamente pela main, criamos outra branch com base nela, efetuamos as devidas alterações, depois damos push e, via Pull Request, iniciamos a migração (merge) para a main.
+É o recomendado, pois permite a colaboração de mais pessoas e o controle do que está na branch main, sem que uma pessoa fique sobrescrevendo o trabalho da outra.
+
+O fluxo destes comandos é:
+Pull da branch main > criar e usar branch nova > pull da branch nova > modificar e subir na branch nova > Pull Request da nova para main > Merge pelo Pull Request > (Opcional) Excluir branch nova
+
+
+
+
+* Criar Pull Request, para migrar (merge) as informações da branch de trabalho para a principal.
+* Pela Pull Request, migrar as informações (merge) para a principal.
+* (Opcional) excluir a branch de trabalho.
+
+```sh
+# Dar pull na branch principal, para estar atualizada com a branch principal remota.
+
+git checkout main
+git pull origin main
+
+# Criar outra branch (caso não existir) e dar push.
+
+git checkout -b nome_branch
+git push origin nome_branch
+
+# Conferir se as branches existem tanto local quanto remotamente.
+
+git branch
+git branch -r
+
+# Selecionar a branch nova
+git checkout test
+git pull test
+
+# Modificar a branch de trabalho, então dar commit e push.
+
+# O comando abaixo irá adicionar todos os arquivos (git add .) para staging
+# e dará commit e push
+
+git add . && git commit -m "mensagem commit" && git push origin nome_branch
+
+# Criar Pull Request
+gh pr create -B main -H nome_branch -t "Titulo Pull Request" -b "Descricao Pull Request"
+
+# Migrar (dar merge) 
+gh pr merge [ID Pull Request] --merge --delete-branch
+
+# (Opcional) Dar merge, excluindo a branch criada
+gh pr merge [ID Pull Request] --merge --delete-branch
+```

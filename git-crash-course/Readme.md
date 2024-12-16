@@ -259,6 +259,8 @@ https://api.github.com/repos/{owner}/{repo}/dispatches
 
 ## Fluxo de trabalho com branch
 
+![gitflow](./img/gitflow.png)
+
 Esta lista de comandos serve como uma referência, de como trabalhar no dia-a-dia com os repositórios, de acordo com o Git Flow.
 Nele, em vez de darmos push diretamente pela main, criamos outra branch com base nela, efetuamos as devidas alterações, depois damos push e, via Pull Request, iniciamos a migração (merge) para a main.
 É o recomendado, pois permite a colaboração de mais pessoas e o controle do que está na branch main, sem que uma pessoa fique sobrescrevendo o trabalho da outra.

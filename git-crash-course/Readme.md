@@ -309,7 +309,7 @@ git add . && git commit -m "mensagem commit" && git push origin nome_branch
 gh pr create -B main -H nome_branch -t "Titulo Pull Request" -b "Descricao Pull Request"
 
 # Migrar (dar merge) 
-gh pr merge [ID Pull Request] --merge --delete-branch
+gh pr merge [ID Pull Request] --merge
 
 # (Opcional) Dar merge, excluindo a branch criada
 gh pr merge [ID Pull Request] --merge --delete-branch
